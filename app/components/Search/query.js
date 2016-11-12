@@ -7,13 +7,11 @@ var Query = React.createClass({
         return {search: "", start: "", end: ""}
     },
     handleChange: function(event) {
-        console.log("TEXT CHANGED");
         var newState = {};
         newState[event.target.id] = event.target.value;
         this.setState(newState);
     },
     handleSubmit: function() {
-        console.log("CLICKED");
         this.props.updateSearch(this.state.search, this.state.start, this.state.end);
         return false;
     },
@@ -55,7 +53,6 @@ var Query = React.createClass({
                     </div>
                 </div>
             </div>
-
         )
     }
 

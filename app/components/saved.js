@@ -9,20 +9,14 @@ var Main = React.createClass({
     componentDidMount: function() {
         helpers.getSaved().then(function(articleData) {
             this.setState({savedArticles: articleData.data});
-            console.log("saved results", articleData.data);
         }.bind(this))
     },
     handleClick: function(item, event) {
-        console.log("CLICKED");
-        console.log(item);
-
         // DELETE
         helpers.deleteSaved(item.title, item.date, item.url).then(function(data) {
-
             // GET SAVED
             helpers.getSaved().then(function(articleData) {
                 this.setState({savedArticles: articleData.data});
-                console.log("saved results", articleData.data);
             }.bind(this))
         }.bind(this))
     },
@@ -63,9 +57,7 @@ var Main = React.createClass({
                     <div className="col-lg-12">
                         <div className="panel panel-primary">
                             <div className="panel-heading">
-                                <h1 className="panel-title">
-                                        User Saved Articles
-                                </h1>
+                                <h1 className="panel-title"> User Saved Articles</h1>
                             </div>
                             <div className="panel-body">
                                 <ul className="list-group">
