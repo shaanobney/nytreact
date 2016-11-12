@@ -15,7 +15,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 // MONGO DB CONFIG
-mongoose.connect('mongodb://localhost/homework');
+mongoose.connect('mongodb://heroku_vpssxc0v:49qtil7u2ntsahfp07914dlk3@ds017155.mlab.com:17155/heroku_vpssxc0v');
 var db = mongoose.connection;
 
 db.on('error', function(err) {
