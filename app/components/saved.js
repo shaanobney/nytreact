@@ -45,7 +45,7 @@ var Main = React.createClass({
                                     </button>
                                 </span>
                             </h3>
-                            <p>Date Published: {article.date.substring(0,10)}</p>
+                            <p>Publish Date: {article.date.substring(0,10)}</p>
                         </li>
                     </div>
                 )

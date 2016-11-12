@@ -74,6 +74,9 @@ a.button2:hover {
 	box-shadow: green 0 80px 0px 2px inset;
 }
 
+h3 {
+  margin-top: 5px;
+}
 
 .btn-danger {
   border-radius: 4px;
