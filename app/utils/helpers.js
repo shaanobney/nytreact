@@ -1,5 +1,6 @@
 var axios = require('axios');
 var APIKey = "9d4a8986921972b65754ea0809d47c84:12:74623931";
+// var searchURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=8aaababbcb3b4a1090ba37660f62ff69&q=";
 var helpers = {
     runQuery: function(term, start, end) {
         var term = term.trim();
@@ -18,7 +19,6 @@ var helpers = {
             return results.data.response;
         });
     },
-
     getSaved: function() {
         return axios.get('/api/saved').then(function(results) {
             console.log("axios results", results);
@@ -47,7 +47,7 @@ var helpers = {
             console.log("axios results", results);
             return results;
         })
+      }
     }
-}
 
 module.exports = helpers;

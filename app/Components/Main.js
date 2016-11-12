@@ -6,27 +6,6 @@ var Main = React.createClass({
         return (
             <div className="main-container">
                 <div className="container">
-                    {/* <nav className="navbar navbar-default" role="navigation">
-                        <div className="container-fluid">
-                            <div className="navbar-header">
-                                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                    <span className="sr-only">NAV</span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                </button>
-                                <a className="navbar-brand" href="#">NYT Article Dump</a>
-                            </div>
-
-                            <div className="collapse navbar-collapse navbar-ex1-collapse">
-                                <ul className="nav navbar-nav navbar-right">
-                                    <li>
-                                        <a href="#/saved">User Saved Articles</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav> */}
 										<div className="wrap">
 								  		<a href="#" className="button">HOME</a>
 								  		<a href="#/saved" className="button2">User Saved Articles</a>

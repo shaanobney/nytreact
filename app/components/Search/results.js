@@ -7,17 +7,14 @@ var Results = React.createClass({
     getInitialState: function() {
         return {title: "", url: "", pubdate: ""}
     },
-
     handleClick: function(item, event) {
         console.log("CLICKED");
         console.log(item);
-
         helpers.postSaved(item.headline.main, item.pub_date, item.web_url).then(function(data) {
             console.log(item.web_url);
         }.bind(this))
 
     },
-
     render: function() {
           if (!this.props.results.hasOwnProperty('docs')) {
             return (
@@ -74,9 +71,7 @@ var Results = React.createClass({
                 </div>
             </div>
         )
-
     }
-
 });
 
 module.exports = Results;
