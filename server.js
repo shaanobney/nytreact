@@ -25,27 +25,35 @@ db.on('error', function(err) {
 db.once('open', function() {
     console.log('Connected Successfully');
 });
+
 // MAIN
 app.get('/', function(req, res) {
     res.sendFile('./public/index.html');
 })
+
 // SAVED
 app.get('/api/saved', function(req, res) {
+
     Article.find({}).exec(function(err, doc) {
+
         if (err) {
             console.log(err);
         } else {
             res.send(doc);
-          }
+        }
     })
 });
 
 // ADD SAVED
 app.post('/api/saved', function(req, res) {
     var newArticle = new Article(req.body);
+
+    console.log(req.body)
+
     var title = req.body.title;
     var date = req.body.date;
     var url = req.body.url;
+
     newArticle.save(function(err, doc) {
         if (err) {
             console.log(err);

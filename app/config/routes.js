@@ -7,11 +7,14 @@ var Search = require('../components/Search');
 var Saved = require('../components/Saved');
 
 // EXPORT ROUTES
-module.exports = ( < Route path = '/' component = {
+module.exports = (
+< Route path = '/' component = {
     Main
-} > {} < Route path = 'Search' component = {
+} > {
+} < Route path = 'Search' component = {
     Search
 } /> <Route path='Saved' component={Saved}/>
-    {} < IndexRoute component = {
+    {
+} < IndexRoute component = {
     Search
 } /> </Route>);

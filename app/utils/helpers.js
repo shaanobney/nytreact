@@ -1,11 +1,11 @@
 var axios = require('axios');
 var APIKey = "cad239ff413d4be4801628605ed683b2";
-// var searchURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=8aaababbcb3b4a1090ba37660f62ff69";
 var helpers = {
     runQuery: function(term, start, end) {
         var term = term.trim();
         var start = start.trim() + "0101";
         var end = end.trim() + "1231";
+        console.log("Query Run");
         return axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json', {
             params: {
                 'api-key': APIKey,
@@ -14,11 +14,14 @@ var helpers = {
                 'end_date': end
             }
         }).then(function(results) {
+            console.log("Axios Results", results.data.response);
             return results.data.response;
         });
     },
+
     getSaved: function() {
         return axios.get('/api/saved').then(function(results) {
+            console.log("axios results", results);
             return results;
         })
     },
@@ -29,6 +32,7 @@ var helpers = {
             url: url
         };
         return axios.post('/api/saved', newArticle).then(function(results) {
+            console.log("axios results", results._id);
             return results._id;
         })
     },
@@ -40,6 +44,7 @@ var helpers = {
                 'url': url
             }
         }).then(function(results) {
+            console.log("axios results", results);
             return results;
         })
     }
