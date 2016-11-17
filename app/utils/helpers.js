@@ -1,5 +1,5 @@
 var axios = require('axios');
-var APIKey = "38b0a1f76b3349ab92d16bddf50b605b";
+var APIKey = "9d4a8986921972b65754ea0809d47c84:12:74623931";
 // var searchURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=8aaababbcb3b4a1090ba37660f62ff69";
 var helpers = {
     runQuery: function(term, start, end) {
