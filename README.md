@@ -1,7 +1,7 @@
 
 Read Me
 -------------
-[NYT Article Dump](https://agile-beyond-15276.herokuapp.com "NYT Article Dump")
+# [New York Times Database Dump](https://agile-beyond-15276.herokuapp.com "NYT Database Dump")
 
 
 **NYT Dump Overview**
