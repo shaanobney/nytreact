@@ -9,4 +9,4 @@ Read Me
 A React-based app that queries the New York Times Article Database, allowing you to read or store selected articles.
 
 
-![](https://github.com/shaanobney/nytreact/blob/master/images/nyd.png?raw=true)
+![](https://github.com/shaanobney/nytreact/blob/master/images/nytd.png?raw=true)
